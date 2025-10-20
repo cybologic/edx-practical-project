@@ -1,0 +1,122 @@
+/* CSS for ProjectXBlock */
+
+.projectxblock_block {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #fafafa;
+}
+
+.projectxblock_block .count {
+    font-weight: bold;
+}
+
+.projectxblock_block p {
+    cursor: pointer;
+}
+
+.project-header h2 {
+    margin: 0 0 10px 0;
+}
+
+.milestones-container {
+    margin-top: 15px;
+}
+
+.milestone-item {
+    padding: 10px;
+    border-radius: 6px;
+    background: #fff;
+    margin-bottom: 8px;
+    border: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* allow children (editor area) to wrap to next line */
+}
+
+.milestone-main {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    /* keep main content on the left */
+    flex: 0 1 auto;
+}
+
+.milestone-item.completed {
+    background: #e6ffed;
+    border-left: 4px solid #28a745;
+}
+
+.milestone-number {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #007bff;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.milestone-item.completed .milestone-number {
+    background: #28a745;
+}
+
+.editor-area {
+    margin-top: 8px;
+    border-top: 1px dashed #eee;
+    padding-top: 8px;
+}
+
+/* make editor area take full width below the row of controls */
+.editor-area {
+    flex-basis: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.milestone-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* push controls to the right on the main row */
+    margin-left: auto;
+}
+
+.milestone-controls .editor-toggle {
+    margin-left: 8px;
+}
+
+/* When controls are moved into the editor area, make sure they're placed at the bottom */
+.editor-area .milestone-controls {
+    margin-top: 12px;
+    justify-content: flex-end;
+    /* inside editor, keep controls right-aligned */
+    margin-right: 6px;
+}
+
+.rich-editor {
+    min-height: 80px;
+    border: 1px solid #ddd;
+    padding: 8px;
+    background: #fff;
+    width: 100%;
+}
+
+.code-editor {
+    width: 100%;
+    min-height: 120px;
+    font-family: monospace;
+    font-size: 13px;
+    border: 1px solid #ddd;
+    padding: 8px;
+    background: #f9f9f9;
+}
+
+.editor-toggle,
+.load-btn,
+.save-btn {
+    margin-left: 8px;
+}
